@@ -16,7 +16,7 @@ Beschreibung:	SFML Game Development
 
 int main()
 {
-	Game game;
+  Game game;
 
   game.run();
 

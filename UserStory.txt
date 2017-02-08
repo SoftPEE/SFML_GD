@@ -15,3 +15,6 @@ Anforderungen Iteration_01
 
 	Grundgerüst für's Userinput erstellen und implementieren.
 		- WASD für die Bewegungssteuerung vorbereiten
+
+	Fixed-Time-Steps
+		- Für berechenbare Bewegungen soll ein fixe FrameTime vorgegeben werden (1/60 Sekunde)

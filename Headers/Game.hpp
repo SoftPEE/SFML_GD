@@ -9,9 +9,13 @@ public:
 
   void run( );
 
+public:
+  static float        PlayerSpeed;
+  static sf::Time     TimePerFrame;
+
 private:
   void processEvents( );
-  void update( );
+  void update(sf::Time dt);
   void render( );
 
   void handlePlayerInput(sf::Keyboard::Key key, bool isPressed);
