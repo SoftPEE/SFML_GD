@@ -15,11 +15,19 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <Text Include="UserStory.txt" />
+  </ItemGroup>
+  <ItemGroup>
     <ClCompile Include="Main.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Game.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="UserStory.txt" />
+    <ClInclude Include="Headers\Game.hpp">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -10,15 +10,16 @@ Beschreibung:	SFML Game Development
 
 ****************************************************************************************************************************/
 
-
-
 #include <iostream>
 
+#include <Game.hpp>
 
 int main()
 {
-	
+	Game game;
+
+  game.run();
 
 
-	return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }

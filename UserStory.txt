@@ -9,4 +9,5 @@ Beschreibung:	SFML Game Development
 
 Anforderungen Iteration_01
 	Grundframework erstellen, d.h. die grundlegenden logischen Abläufe in einem Spiel sollen erstellt und implementiert werden.
-	Dazu zählen die internen Spielschleifen.
+		- Main-Loop
+		- Event-Loop
