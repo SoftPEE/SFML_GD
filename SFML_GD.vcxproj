@@ -152,10 +152,23 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Sources\Configuration.cpp" />
     <ClCompile Include="Sources\Game.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\Configuration.hpp" />
     <ClInclude Include="Headers\Game.hpp" />
+    <ClInclude Include="Headers\ResourceHolder.hpp" />
+    <ClInclude Include="Headers\ResourceIdentifier.hpp" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SFML_GD.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Headers\ResourceHolder.inl" />
+    <None Include="appConfig.ini" />
+    <None Include="Sources\resourceConfig.ini" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

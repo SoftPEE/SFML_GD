@@ -1,7 +1,8 @@
 #include <Game.hpp>
 
-float       Game::PlayerSpeed = 100.0;
-sf::Time    Game::TimePerFrame = sf::Time(sf::seconds(1.0/60.0));
+//STATIC MEMBER 
+float       Game::PLAYERSPEED       = 100.0;
+sf::Time    Game::TIME_PER_FRAME    = sf::Time(sf::seconds(1.0/60.0));
 
 Game::Game( )
   : mWindow{ sf::VideoMode(640,480), "SFML Application" }
@@ -32,11 +33,11 @@ void Game::run( )
     processEvents();
     timeSinceLastUpdate += clock.restart();
 
-    while (timeSinceLastUpdate > TimePerFrame)
+    while (timeSinceLastUpdate > TIME_PER_FRAME)
     {
-      timeSinceLastUpdate -= TimePerFrame;
+      timeSinceLastUpdate -= TIME_PER_FRAME;
       processEvents();
-      update(TimePerFrame);
+      update(TIME_PER_FRAME);
     }
     render();
   }
@@ -68,13 +69,13 @@ void Game::update(sf::Time dt)
 {
   sf::Vector2f movement(0.f,0.f);
   if (mIsMovingUp)
-    movement.y -= PlayerSpeed;
+    movement.y -= PLAYERSPEED;
   if (mIsMovingDown)
-    movement.y += PlayerSpeed;
+    movement.y += PLAYERSPEED;
   if (mIsMovingLeft)
-    movement.x -= PlayerSpeed;
+    movement.x -= PLAYERSPEED;
   if (mIsMovingRight)
-    movement.x += PlayerSpeed;
+    movement.x += PLAYERSPEED;
 
   mPlayer.move(movement * dt.asSeconds());
 }
