@@ -2,7 +2,7 @@
 SFML_GD
 Author:			      	Patrick Gehrt
 Datum:			      	08.02.2017
-Letzte Bearbeitung: 18.02.2017
+Letzte Bearbeitung: 21.02.2017
 Version:		      	0.0.0.1
 SFML-Version:	      2.4.1
 
@@ -13,6 +13,7 @@ Beschreibung:	SFML Game Development
 
 #include <iostream>
 #include <fstream>
+#include <Windows.h>
 
 #include <Game.hpp>
 #include <Configuration.hpp>

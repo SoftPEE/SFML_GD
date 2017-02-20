@@ -1,7 +1,7 @@
 SFML_GD
 Author:				Patrick Gehrt
 Datum:				08.02.2017
-Letzte Bearbeitung	18.02.2017
+Letzte Bearbeitung	21.02.2017
 Version:			0.0.0.1
 SFML-Version:		2.4.1
 
@@ -26,3 +26,16 @@ Anforderungen Iteration_01
 	Config-Handler
 		- Handler für Konfigurationsdateien erstellen
 		- Über die Streamoperatoren >>, << können Konfigurationsdateien ein und ausgelesen werden
+
+	Entitis - System
+		- Alle im Spiel enthaltenen Objekte sind vom Objekt Entity abgeleitet
+		- Entity enthält die grundlegenden Funktionen
+
+	Aircraft
+		- Objekte für verschiedene Aircrafts
+		- Abgeleitet von Entity
+
+	SceneNode
+		- SceneNode Objekte bildet die Datenstruktur aller Objekte dar
+		- sämtliche Objekte sind von der Klasse abgeleitet (Entity)
+		- SceneNode Objekte sollen in einem Graphen verwaltet werden

@@ -152,18 +152,20 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Sources\Aircraft.cpp" />
     <ClCompile Include="Sources\Configuration.cpp" />
+    <ClCompile Include="Sources\Entity.cpp" />
     <ClCompile Include="Sources\Game.cpp" />
+    <ClCompile Include="Sources\SceneNode.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\Aircraft.hpp" />
     <ClInclude Include="Headers\Configuration.hpp" />
+    <ClInclude Include="Headers\Entity.hpp" />
     <ClInclude Include="Headers\Game.hpp" />
     <ClInclude Include="Headers\ResourceHolder.hpp" />
     <ClInclude Include="Headers\ResourceIdentifier.hpp" />
-    <ClInclude Include="resource.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="SFML_GD.rc" />
+    <ClInclude Include="Headers\SceneNode.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Headers\ResourceHolder.inl" />
