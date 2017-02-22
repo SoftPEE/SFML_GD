@@ -157,6 +157,8 @@
     <ClCompile Include="Sources\Entity.cpp" />
     <ClCompile Include="Sources\Game.cpp" />
     <ClCompile Include="Sources\SceneNode.cpp" />
+    <ClCompile Include="Sources\SpriteNode.cpp" />
+    <ClCompile Include="Sources\World.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Aircraft.hpp" />
@@ -166,6 +168,8 @@
     <ClInclude Include="Headers\ResourceHolder.hpp" />
     <ClInclude Include="Headers\ResourceIdentifier.hpp" />
     <ClInclude Include="Headers\SceneNode.hpp" />
+    <ClInclude Include="Headers\SpriteNode.hpp" />
+    <ClInclude Include="Headers\World.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Headers\ResourceHolder.inl" />

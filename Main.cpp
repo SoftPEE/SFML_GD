@@ -2,8 +2,8 @@
 SFML_GD
 Author:			      	Patrick Gehrt
 Datum:			      	08.02.2017
-Letzte Bearbeitung: 21.02.2017
-Version:		      	0.0.0.1
+Letzte Bearbeitung: 22.02.2017
+Version:		      	0.0.0.2
 SFML-Version:	      2.4.1
 
 Beschreibung:	SFML Game Development
@@ -28,9 +28,17 @@ int main()
 
   std::cout << myConfigdata;
 
-  Game game;
-
-  game.run();
+  try
+  {
+    Game game;
+    game.run();
+  }
+  catch (std::exception e)
+  {
+    std::cerr << e.what();
+    std::cin.get();
+  }
+  
 
 
   return EXIT_SUCCESS;

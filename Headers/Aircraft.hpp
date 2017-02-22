@@ -5,7 +5,7 @@
 #include <Entity.hpp>
 #include <ResourceIdentifier.hpp>
 
-class Aircraft : Entity
+class Aircraft : public Entity
 {
 public:
   enum Type

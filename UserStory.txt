@@ -1,8 +1,8 @@
 SFML_GD
 Author:				Patrick Gehrt
 Datum:				08.02.2017
-Letzte Bearbeitung	21.02.2017
-Version:			0.0.0.1
+Letzte Bearbeitung	22.02.2017
+Version:			0.0.0.2
 SFML-Version:		2.4.1
 
 Beschreibung:	SFML Game Development
@@ -39,3 +39,6 @@ Anforderungen Iteration_01
 		- SceneNode Objekte bildet die Datenstruktur aller Objekte dar
 		- sämtliche Objekte sind von der Klasse abgeleitet (Entity)
 		- SceneNode Objekte sollen in einem Graphen verwaltet werden
+
+	Testumgebung erstellen
+		- Spieler-Aircraft mit 2 eskortierenden Flugzeugen zu Testzwecken übers Spielfeld fliegen lassen

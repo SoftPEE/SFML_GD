@@ -6,6 +6,7 @@
 #include <SFML\Graphics\Drawable.hpp>
 #include <SFML\Graphics\Transformable.hpp>
 #include <SFML\System\NonCopyable.hpp>
+#include <SFML\System\Time.hpp>
 
 class SceneNode : public sf::Drawable, public sf::Transformable, private sf::NonCopyable
 {
@@ -19,12 +20,19 @@ private:
 public:
   SceneNode::SceneNode();
 
-  void    attachChild(Ptr child);
-  Ptr     detachChild(const SceneNode& node);
+  void          update(sf::Time dt);
+
+  void          attachChild(Ptr child);
+  Ptr           detachChild(const SceneNode& node);
+  sf::Vector2f  getWorldPosition() const;
 
 private:
+  sf::Transform getWorldTransforms() const;
   virtual void  draw(sf::RenderTarget& target, sf::RenderStates states) const;
   virtual void  drawCurrent(sf::RenderTarget& target, sf::RenderStates states) const;
           void  drawChildren(sf::RenderTarget& target, sf::RenderStates states) const;
+               
+  virtual void  updateCurrent(sf::Time dt);
+          void  updateChildren(sf::Time dt);
 
 };

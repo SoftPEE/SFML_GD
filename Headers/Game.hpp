@@ -1,16 +1,17 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <World.hpp>
 
 class Game
 {
 private:
-  sf::RenderWindow mWindow;
-  sf::CircleShape  mPlayer;
+  sf::RenderWindow  mWindow;
+  World             mWorld;
 
-  bool             mIsMovingUp;
-  bool             mIsMovingDown;
-  bool             mIsMovingLeft;
-  bool             mIsMovingRight;
+  bool              mIsMovingUp;
+  bool              mIsMovingDown;
+  bool              mIsMovingLeft;
+  bool              mIsMovingRight;
 
 public:
   static float        PLAYERSPEED;

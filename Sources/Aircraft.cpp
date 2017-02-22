@@ -21,7 +21,8 @@ Aircraft::Aircraft(Aircraft::Type type, const TextureHolder& texture)
   : mType {type }
   , mSprite{texture.get(toTextureID(type))}
 {
-
+  auto bounds = mSprite.getLocalBounds();
+  mSprite.setOrigin(bounds.width / 2.0, bounds.height / 2.0);
 }
 
 

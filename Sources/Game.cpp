@@ -6,15 +6,13 @@ sf::Time    Game::TIME_PER_FRAME    = sf::Time(sf::seconds(1.0/60.0));
 
 Game::Game( )
   : mWindow{ sf::VideoMode(640,480), "SFML Application" }
-  , mPlayer{ }
+  , mWorld{mWindow }
   , mIsMovingUp{false }
   , mIsMovingDown{false }
   , mIsMovingLeft{false }
   , mIsMovingRight{false }
 {
-  mPlayer.setRadius(40.f);
-  mPlayer.setPosition(100.f, 100.f);
-  mPlayer.setFillColor(sf::Color::Cyan);
+ 
 }
 
 
@@ -67,7 +65,7 @@ void Game::processEvents( )
 
 void Game::update(sf::Time dt)
 {
-  sf::Vector2f movement(0.f,0.f);
+ /* sf::Vector2f movement(0.f,0.f);
   if (mIsMovingUp)
     movement.y -= PLAYERSPEED;
   if (mIsMovingDown)
@@ -77,14 +75,15 @@ void Game::update(sf::Time dt)
   if (mIsMovingRight)
     movement.x += PLAYERSPEED;
 
-  mPlayer.move(movement * dt.asSeconds());
+  mPlayer.move(movement * dt.asSeconds());*/
+  mWorld.update(dt);
 }
 
 
 void Game::render( )
 {
   mWindow.clear();
-  mWindow.draw(mPlayer);
+  mWorld.draw();
   mWindow.display();
 }
 

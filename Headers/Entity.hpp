@@ -4,10 +4,12 @@
 
 #include <SceneNode.hpp>
 
-class Entity : SceneNode
+class Entity : public SceneNode
 {
 private:
   sf::Vector2f    mVelocity;
+
+  virtual void    updateCurrent(sf::Time dt);
 
 public:
   void            setVelocity(sf::Vector2f velocity);
