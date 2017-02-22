@@ -1,86 +1,122 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Quelldateien">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Headerdateien">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
-    </Filter>
     <Filter Include="Ressourcendateien">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien\Media/Textures">
+      <UniqueIdentifier>{8adde4c4-fd8d-4020-96ac-141f2b537379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files">
+      <UniqueIdentifier>{3c1b6bcc-368e-4fa6-8fcd-0074e0ffa99a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Objekte">
+      <UniqueIdentifier>{b7667104-8551-40d8-832f-378a9d770252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Objekte\HPP">
+      <UniqueIdentifier>{bf4e797a-fa26-4212-b2c4-398a90bf4222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Objekte\SRC">
+      <UniqueIdentifier>{3f8ae6aa-51a8-453b-8d8b-660cb2a258a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Resource">
+      <UniqueIdentifier>{91f5322f-daef-4767-9248-484842a94a17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Resource\HPP">
+      <UniqueIdentifier>{93298397-9b18-4c9c-9475-ef5cfc82cd17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Resource\SRC">
+      <UniqueIdentifier>{c329cbba-c1db-4140-98f0-176ba2e0b7b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Game">
+      <UniqueIdentifier>{445e0ffc-fcb8-4a15-a45b-9bfdb4aa0bab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Game\HPP">
+      <UniqueIdentifier>{c57eb424-bc52-4287-9aaa-178fcad87932}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Game\SRC">
+      <UniqueIdentifier>{dd67fb4e-d2ea-41f8-83a5-ed8b2da3f844}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="UserStory.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Main.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Sources\Game.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Sources\Configuration.cpp">
-      <Filter>Quelldateien</Filter>
+    <ClCompile Include="Sources\Aircraft.cpp">
+      <Filter>Code-Files\Objekte\SRC</Filter>
     </ClCompile>
     <ClCompile Include="Sources\Entity.cpp">
-      <Filter>Quelldateien</Filter>
-    </ClCompile>
-    <ClCompile Include="Sources\Aircraft.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>Code-Files\Objekte\SRC</Filter>
     </ClCompile>
     <ClCompile Include="Sources\SceneNode.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>Code-Files\Objekte\SRC</Filter>
     </ClCompile>
     <ClCompile Include="Sources\SpriteNode.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>Code-Files\Objekte\SRC</Filter>
     </ClCompile>
     <ClCompile Include="Sources\World.cpp">
-      <Filter>Quelldateien</Filter>
+      <Filter>Code-Files\Game\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Game.cpp">
+      <Filter>Code-Files\Game\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Configuration.cpp">
+      <Filter>Code-Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Code-Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Headers\Game.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Headers\ResourceIdentifier.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Headers\ResourceHolder.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Headers\Configuration.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
-    <ClInclude Include="Headers\Entity.hpp">
-      <Filter>Headerdateien</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\Aircraft.hpp">
-      <Filter>Headerdateien</Filter>
+      <Filter>Code-Files\Objekte\HPP</Filter>
     </ClInclude>
     <ClInclude Include="Headers\SceneNode.hpp">
-      <Filter>Headerdateien</Filter>
+      <Filter>Code-Files\Objekte\HPP</Filter>
     </ClInclude>
     <ClInclude Include="Headers\SpriteNode.hpp">
-      <Filter>Headerdateien</Filter>
+      <Filter>Code-Files\Objekte\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Entity.hpp">
+      <Filter>Code-Files\Objekte\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ResourceHolder.hpp">
+      <Filter>Code-Files\Resource\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ResourceIdentifier.hpp">
+      <Filter>Code-Files\Resource\HPP</Filter>
     </ClInclude>
     <ClInclude Include="Headers\World.hpp">
-      <Filter>Headerdateien</Filter>
+      <Filter>Code-Files\Game\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Game.hpp">
+      <Filter>Code-Files\Game\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Configuration.hpp">
+      <Filter>Code-Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Headers\ResourceHolder.inl">
-      <Filter>Headerdateien</Filter>
-    </None>
     <None Include="appConfig.ini">
       <Filter>Ressourcendateien</Filter>
     </None>
     <None Include="Sources\resourceConfig.ini">
       <Filter>Ressourcendateien</Filter>
     </None>
+    <None Include="Headers\ResourceHolder.inl">
+      <Filter>Code-Files\Resource\HPP</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Media\Textures\Desert.png">
+      <Filter>Ressourcendateien\Media/Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\Eagle.png">
+      <Filter>Ressourcendateien\Media/Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\Raptor.png">
+      <Filter>Ressourcendateien\Media/Textures</Filter>
+    </Image>
   </ItemGroup>
 </Project>

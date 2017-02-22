@@ -176,6 +176,11 @@
     <None Include="appConfig.ini" />
     <None Include="Sources\resourceConfig.ini" />
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="Media\Textures\Desert.png" />
+    <Image Include="Media\Textures\Eagle.png" />
+    <Image Include="Media\Textures\Raptor.png" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
