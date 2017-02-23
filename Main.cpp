@@ -2,7 +2,7 @@
 SFML_GD
 Author:			      	Patrick Gehrt
 Datum:			      	08.02.2017
-Letzte Bearbeitung: 22.02.2017
+Letzte Bearbeitung: 23.02.2017
 Version:		      	0.0.0.2
 SFML-Version:	      2.4.1
 

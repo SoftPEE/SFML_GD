@@ -83,17 +83,6 @@ void World::buildScene( )
   mPlayer->setPosition(mSpawnposition);
   mPlayer->setVelocity(40.0f, mScrollSpeed);
   mSceneLayer[Air]->attachChild(std::move(playerAircraft));
-
-
-  //Eskorte erstellen
-  std::unique_ptr<Aircraft> escortLeft{new Aircraft{Aircraft::Raptor, mTextures } };
-  escortLeft->setPosition(-50,50);
-
-  std::unique_ptr<Aircraft> escortRight{new Aircraft{Aircraft::Raptor, mTextures } };
-  escortRight->setPosition(50,50);
-
-  mPlayer->attachChild(std::move(escortLeft));
-  mPlayer->attachChild(std::move(escortRight));
 }
 
 
