@@ -1,5 +1,7 @@
 #include <World.hpp>
 
+#include <SFML\Graphics\RenderWindow.hpp>
+
 World::World(sf::RenderWindow& window)
   : mWindow{ window }
   , mWorldView{ window.getDefaultView( ) }
@@ -20,18 +22,16 @@ World::World(sf::RenderWindow& window)
 
 void World::update(sf::Time dt)
 {
-  mWorldView.move(0, mScrollSpeed * dt.asSeconds( ));
+  mWorldView.move(0, mScrollSpeed * dt.asSeconds( )); 
+  mPlayer->setVelocity(0.0f, 0.0f);
+
+  while(!mCommandQueue.isEmpty())
+    mSceneGraph.onCommand(mCommandQueue.pop(), dt);
+  adaptPlayerVelocity();
+  
+
   mSceneGraph.update(dt);
-
-  sf::Vector2f playerPosition = mPlayer->getPosition( );
-  sf::Vector2f playerVelocity = mPlayer->getVelocity( );
-
-  if ((playerPosition.x >= mWorldBounds.left + mWorldBounds.width - 150.0f) ||
-      (playerPosition.x <= mWorldBounds.left + 150.0f))
-  {
-    playerVelocity.x = -playerVelocity.x;
-    mPlayer->setVelocity(playerVelocity);
-  }
+  adaptPlayerPosition();
 }
 
 
@@ -39,6 +39,12 @@ void World::draw( )
 {
   mWindow.setView(mWorldView);
   mWindow.draw(mSceneGraph);
+}
+
+
+CommandQueue& World::getCommandQueue( )
+{
+  return mCommandQueue;
 }
 
 
@@ -88,4 +94,30 @@ void World::buildScene( )
 
   mPlayer->attachChild(std::move(escortLeft));
   mPlayer->attachChild(std::move(escortRight));
+}
+
+
+void World::adaptPlayerVelocity( )
+{
+  sf::Vector2f playerVelocity = mPlayer->getVelocity();
+
+  if (playerVelocity.x != 0.0f && playerVelocity.y != 0.0f)
+    mPlayer->setVelocity(playerVelocity / std::sqrt(2.0f));
+  mPlayer->accelerator(0.0f, mScrollSpeed);
+}
+
+
+void World::adaptPlayerPosition( )
+{
+  sf::FloatRect viewBounds(mWorldView.getCenter() - mWorldView.getSize() / 2.0f, mWorldView.getSize());
+  const float   borderDistance = 40.0f;
+
+  sf::Vector2f position = mPlayer->getPosition();
+
+  position.x = std::min(position.x, viewBounds.left + viewBounds.width - borderDistance);
+  position.x = std::max(position.x, viewBounds.left + borderDistance);
+  position.y = std::min(position.y, viewBounds.top + viewBounds.height - borderDistance);
+  position.y = std::max(position.y, viewBounds.top + borderDistance);
+
+  mPlayer->setPosition(position);
 }

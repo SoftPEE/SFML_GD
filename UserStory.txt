@@ -42,3 +42,6 @@ Anforderungen Iteration_01
 
 	Testumgebung erstellen
 		- Spieler-Aircraft mit 2 eskortierenden Flugzeugen zu Testzwecken übers Spielfeld fliegen lassen
+
+	Message System
+		- siehe Message System.txt

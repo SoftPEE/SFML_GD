@@ -1,4 +1,10 @@
 #include <Game.hpp>
+#include <CommandQueue.hpp>
+#include <Command.hpp>
+
+#include <SFML\Window\Event.hpp>
+
+#include <iostream>
 
 //STATIC MEMBER 
 float       Game::PLAYERSPEED       = 100.0;
@@ -11,8 +17,16 @@ Game::Game( )
   , mIsMovingDown{false }
   , mIsMovingLeft{false }
   , mIsMovingRight{false }
+  , mStatisticFont{ }
+  , mStatisticText{ }
+  , mStatisticTime{sf::Time::Zero }
+  , mStatisticFramesPerSeconds{ 0 }
+  , mPlayer{ }
 {
- 
+  mStatisticFont.load(Fonts::default, "Media//Sansation.ttf");
+  mStatisticText.setFont(mStatisticFont.get(Fonts::default));
+  mStatisticText.setPosition(5.0f,5.0f);
+  mStatisticText.setCharacterSize(10);
 }
 
 
@@ -29,7 +43,8 @@ void Game::run( )
   while (mWindow.isOpen())
   {
     processEvents();
-    timeSinceLastUpdate += clock.restart();
+    sf::Time elapsedTime = clock.restart();
+    timeSinceLastUpdate += elapsedTime;
 
     while (timeSinceLastUpdate > TIME_PER_FRAME)
     {
@@ -37,6 +52,7 @@ void Game::run( )
       processEvents();
       update(TIME_PER_FRAME);
     }
+    updateStatistics(elapsedTime);
     render();
   }
 }
@@ -44,22 +60,19 @@ void Game::run( )
 
 void Game::processEvents( )
 {
+  CommandQueue& commands = mWorld.getCommandQueue();
   sf::Event event;
 
   while (mWindow.pollEvent(event))
   {
-    switch (event.type)
-    {
-      case sf::Event::KeyPressed: 
-        handlePlayerInput(event.key.code, true); 
-        break;
-      case sf::Event::KeyReleased: 
-        handlePlayerInput(event.key.code, false);
-        break;
-      case sf::Event::Closed:
-        mWindow.close();
-    }
+    
+    mPlayer.handleEvent(event, commands);
+    if (event.type == sf::Event::Closed)
+      mWindow.close();
+    
   }
+
+  mPlayer.handleRealTimeInput(commands);
 }
 
 
@@ -84,6 +97,8 @@ void Game::render( )
 {
   mWindow.clear();
   mWorld.draw();
+  mWindow.setView(mWindow.getDefaultView());
+  mWindow.draw(mStatisticText);
   mWindow.display();
 }
 
@@ -97,4 +112,19 @@ void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed)
     mIsMovingLeft = isPressed;
   else if (key == sf::Keyboard::D)
     mIsMovingRight = isPressed;
+}
+
+void Game::updateStatistics(sf::Time dt)
+{
+  mStatisticTime += dt;
+  mStatisticFramesPerSeconds += 1;
+  
+  if (mStatisticTime >= sf::Time(sf::seconds(1.0)))
+  {
+    mStatisticText.setString("Frames / Seconds " + std::to_string(mStatisticFramesPerSeconds) + "\n"
+    + "Time / Update " + std::to_string(mStatisticTime.asMicroseconds() / mStatisticFramesPerSeconds) + "ms");
+
+    mStatisticTime -= sf::seconds(1.0);
+    mStatisticFramesPerSeconds = 0;
+  }
 }

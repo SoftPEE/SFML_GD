@@ -21,6 +21,8 @@ private:
 public:
   Aircraft(Type type, const TextureHolder& texture);
 
+  virtual size_t  getCategory() const;
+
 private:
   virtual void drawCurrent(sf::RenderTarget& states, sf::RenderStates target) const;
 

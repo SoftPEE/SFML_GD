@@ -1,8 +1,11 @@
 #include <Aircraft.hpp>
 #include <ResourceHolder.hpp>
+#include <Category.hpp>
 
 #include<SFML\Graphics\RenderTarget.hpp>
 #include<SFML\Graphics\RenderStates.hpp>
+
+
 
 Textures::ID toTextureID(Aircraft::Type type)
 {
@@ -23,6 +26,19 @@ Aircraft::Aircraft(Aircraft::Type type, const TextureHolder& texture)
 {
   auto bounds = mSprite.getLocalBounds();
   mSprite.setOrigin(bounds.width / 2.0, bounds.height / 2.0);
+}
+
+
+size_t Aircraft::getCategory( ) const
+{
+  switch (mType)
+  {
+  case Eagle:
+    return Category::PlayerAircraft;
+    break;
+  default:
+    return Category::EnemyAircraft;
+  }
 }
 
 

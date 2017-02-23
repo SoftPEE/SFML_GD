@@ -1,0 +1,5 @@
+Klassenbaum
+===========
+SceneNode	-> SpriteNode
+			-> Entity			-> Aircraft
+

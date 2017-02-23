@@ -1,0 +1,18 @@
+Message System (Command system)
+
+Um eine Message zu schicken muss ein neues Command erstellt werden.
+In dem Command wird eine Funktion und eine Category zugeordnet. 
+Die Category wird zum Zweck ausgewehrtet, um das Command dem Richtigen Objekt/en zuzuordnen.
+
+Stand 22.02.2017
+	Command wird vom SceneNode >>onCommand<< ausgeführt
+
+World beinhaltet die Commandqueue!
+
+Verlauf der Commandqueue
+========================
+Commandqueue mit Spielerbefehlen füllen:
+	World >>Referenze<< -> Game >>Referenz<< -> Player --> Playerinput |
+
+Commandqueue ausführen
+	World (update) >> SceneGraph (SceneNode) >> onCommand von jedem Node in der Struktur >> Command.action (ausführende Funktion)

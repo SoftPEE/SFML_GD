@@ -1,0 +1,6 @@
+Objektdatenstruktur
+===================
+
+ausgehend vom World - Objekt  (world.hpp / .cpp)
+	SceneRoot	-> SceneNode[Layer_Background]	-> Background-Sprite
+				-> SceneNode[Layer_Air]			-> Player-Objekt

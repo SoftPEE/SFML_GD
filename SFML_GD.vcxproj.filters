@@ -5,9 +5,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Ressourcendateien\Media/Textures">
-      <UniqueIdentifier>{8adde4c4-fd8d-4020-96ac-141f2b537379}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Code-Files">
       <UniqueIdentifier>{3c1b6bcc-368e-4fa6-8fcd-0074e0ffa99a}</UniqueIdentifier>
     </Filter>
@@ -38,9 +35,36 @@
     <Filter Include="Code-Files\Game\SRC">
       <UniqueIdentifier>{dd67fb4e-d2ea-41f8-83a5-ed8b2da3f844}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Ressourcendateien\Media">
+      <UniqueIdentifier>{8adde4c4-fd8d-4020-96ac-141f2b537379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ressourcendateien\Media\Textures">
+      <UniqueIdentifier>{725a0b26-8496-4344-8542-12963a69bca6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\MessageSystem">
+      <UniqueIdentifier>{6f61ee06-efc4-4f7b-aa93-90e4c266450c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\MessageSystem\HPP">
+      <UniqueIdentifier>{42593897-50a5-474b-8448-2425300eee73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\MessageSystem\SRC">
+      <UniqueIdentifier>{33dc083f-5fc2-40d5-9a3c-de653de67026}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Controller">
+      <UniqueIdentifier>{6d598699-15dd-4a28-a62b-63bf9496bce5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Controller\HPP">
+      <UniqueIdentifier>{f62e1f0c-a59e-49ef-a32f-07362cad8c78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Controller\SRC">
+      <UniqueIdentifier>{6119c411-48ad-4c2a-b292-1521c8e2fc40}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="UserStory.txt" />
+    <Text Include="Sources\Message System.txt" />
+    <Text Include="Sources\Klassen.txt" />
+    <Text Include="Sources\Objektdatenstruktur.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Aircraft.cpp">
@@ -66,6 +90,15 @@
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Code-Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Command.cpp">
+      <Filter>Code-Files\MessageSystem\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\CommandQueue.cpp">
+      <Filter>Code-Files\MessageSystem\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Player.cpp">
+      <Filter>Code-Files\Controller\SRC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -96,6 +129,18 @@
     <ClInclude Include="Headers\Configuration.hpp">
       <Filter>Code-Files</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Command.hpp">
+      <Filter>Code-Files\MessageSystem\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Category.hpp">
+      <Filter>Code-Files\Resource\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\CommandQueue.hpp">
+      <Filter>Code-Files\MessageSystem\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Player.hpp">
+      <Filter>Code-Files\Controller\HPP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="appConfig.ini">
@@ -110,13 +155,18 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Media\Textures\Desert.png">
-      <Filter>Ressourcendateien\Media/Textures</Filter>
+      <Filter>Ressourcendateien\Media\Textures</Filter>
     </Image>
     <Image Include="Media\Textures\Eagle.png">
-      <Filter>Ressourcendateien\Media/Textures</Filter>
+      <Filter>Ressourcendateien\Media\Textures</Filter>
     </Image>
     <Image Include="Media\Textures\Raptor.png">
-      <Filter>Ressourcendateien\Media/Textures</Filter>
+      <Filter>Ressourcendateien\Media\Textures</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Media\Sansation.ttf">
+      <Filter>Ressourcendateien\Media</Filter>
+    </Font>
   </ItemGroup>
 </Project>
