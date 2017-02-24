@@ -4,6 +4,7 @@
 #include <TitleState.hpp>
 #include <GameState.hpp>
 #include <MenuState.hpp>
+#include <PauseState.hpp>
 
 //STATIC
 const sf::Time Application::TIME_PER_FRAME = sf::Time(sf::seconds(1.0/60.0));
@@ -93,7 +94,7 @@ void Application::registerStates( )
   mStateStack.registerState<TitleState>(States::Title);
   mStateStack.registerState<MenuState>(States::Menu);
   mStateStack.registerState<GameState>(States::Game);
-  //mStateStack.registerState<PauseState>(States::Pause);
+  mStateStack.registerState<PauseState>(States::Pause);
 }
 
 
