@@ -48,3 +48,14 @@ Anforderungen Iteration_01
 
 	PlayerInput
 		- Mittels einer Controlerklasse werden die Playerinputs als Messages aufgenommen und im Spiel interpretiert
+
+	State System
+		- State - Basisklasse und Statestack erstellen
+
+	TitleState erstellen
+	GameState erstellen
+		- GameState wird von der vorherigen Klasse Game gebildet
+		- Die Funktionalität der Methode Run() wird in einer neuen Klasse Application gelegt
+
+	Application
+		- Hauptklasse in der die gesamte Datenstruktur liegt

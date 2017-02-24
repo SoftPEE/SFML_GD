@@ -1,0 +1,19 @@
+States
+======
+
+StateStack 
+Alle benutzen States müssen im StateStack registriert werden.
+Zum Start wird der State Title geladen.
+Es muss immer ein State pro Frame aktiv sein, sonst wird das Programm geschlossen.
+
+
+Struktur
+========
+
+State	>>  GameState
+		>>	TitleState
+		>>	MenuState
+		>>	PauseState
+
+Update und Events werden im Stack rückwärts durchlaufen
+Draw wird vorwärts durchlaufen

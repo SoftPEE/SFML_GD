@@ -14,7 +14,8 @@ namespace Textures
   {
     Eagle,
     Raptor,
-    Dessert
+    Dessert,
+    TitleScreen
   };
 
 }
@@ -23,7 +24,8 @@ namespace Fonts
 {
   enum ID
   {
-    default
+    default,
+    TitleFont
   };
 }
 

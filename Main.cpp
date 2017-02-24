@@ -15,14 +15,14 @@ Beschreibung:	SFML Game Development
 #include <fstream>
 #include <Windows.h>
 
-#include <Game.hpp>
+#include <Application.hpp>
 #include <Configuration.hpp>
 
 int main()
 {
   configuration::data myConfigdata;
 
-  std::ifstream f("appConfig.ini");
+  std::ifstream f("data//app.ini");
 
   f >> myConfigdata;
 
@@ -30,8 +30,8 @@ int main()
 
   try
   {
-    Game game;
-    game.run();
+    Application app;
+    app.run();
   }
   catch (std::exception e)
   {

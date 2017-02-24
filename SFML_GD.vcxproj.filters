@@ -59,12 +59,22 @@
     <Filter Include="Code-Files\Controller\SRC">
       <UniqueIdentifier>{6119c411-48ad-4c2a-b292-1521c8e2fc40}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Code-Files\State">
+      <UniqueIdentifier>{74e0ca2d-2984-4846-93eb-2b5bdb8ca1c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\State\HPP">
+      <UniqueIdentifier>{85e349f2-d6f4-4038-8dee-04ae8fe53d8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\State\SRC">
+      <UniqueIdentifier>{460f4409-cae8-4e08-b818-7308d256143d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="UserStory.txt" />
-    <Text Include="Sources\Message System.txt" />
-    <Text Include="Sources\Klassen.txt" />
-    <Text Include="Sources\Objektdatenstruktur.txt" />
+    <Text Include="Klassen.txt" />
+    <Text Include="Message System.txt" />
+    <Text Include="Objektdatenstruktur.txt" />
+    <Text Include="State Struktur.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Aircraft.cpp">
@@ -82,9 +92,6 @@
     <ClCompile Include="Sources\World.cpp">
       <Filter>Code-Files\Game\SRC</Filter>
     </ClCompile>
-    <ClCompile Include="Sources\Game.cpp">
-      <Filter>Code-Files\Game\SRC</Filter>
-    </ClCompile>
     <ClCompile Include="Sources\Configuration.cpp">
       <Filter>Code-Files</Filter>
     </ClCompile>
@@ -99,6 +106,24 @@
     </ClCompile>
     <ClCompile Include="Sources\Player.cpp">
       <Filter>Code-Files\Controller\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\StateStack.cpp">
+      <Filter>Code-Files\State\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\State.cpp">
+      <Filter>Code-Files\State\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Application.cpp">
+      <Filter>Code-Files\Game\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\GameState.cpp">
+      <Filter>Code-Files\State\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\TitleState.cpp">
+      <Filter>Code-Files\State\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Utilities.cpp">
+      <Filter>Code-Files\Resource\SRC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -123,9 +148,6 @@
     <ClInclude Include="Headers\World.hpp">
       <Filter>Code-Files\Game\HPP</Filter>
     </ClInclude>
-    <ClInclude Include="Headers\Game.hpp">
-      <Filter>Code-Files\Game\HPP</Filter>
-    </ClInclude>
     <ClInclude Include="Headers\Configuration.hpp">
       <Filter>Code-Files</Filter>
     </ClInclude>
@@ -141,16 +163,40 @@
     <ClInclude Include="Headers\Player.hpp">
       <Filter>Code-Files\Controller\HPP</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\StateStack.hpp">
+      <Filter>Code-Files\State\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\State.hpp">
+      <Filter>Code-Files\State\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\StateIdentifiers.hpp">
+      <Filter>Code-Files\State\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Application.hpp">
+      <Filter>Code-Files\Game\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\GameState.hpp">
+      <Filter>Code-Files\State\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\TitleState.hpp">
+      <Filter>Code-Files\State\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Utilities.hpp">
+      <Filter>Code-Files\Resource\HPP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="appConfig.ini">
-      <Filter>Ressourcendateien</Filter>
-    </None>
-    <None Include="Sources\resourceConfig.ini">
-      <Filter>Ressourcendateien</Filter>
-    </None>
     <None Include="Headers\ResourceHolder.inl">
       <Filter>Code-Files\Resource\HPP</Filter>
+    </None>
+    <None Include="data\app.ini">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="data\appConfig.ini">
+      <Filter>Ressourcendateien</Filter>
+    </None>
+    <None Include="data\resourceConfig.ini">
+      <Filter>Ressourcendateien</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -161,6 +207,9 @@
       <Filter>Ressourcendateien\Media\Textures</Filter>
     </Image>
     <Image Include="Media\Textures\Raptor.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\TitleScreen.png">
       <Filter>Ressourcendateien\Media\Textures</Filter>
     </Image>
   </ItemGroup>

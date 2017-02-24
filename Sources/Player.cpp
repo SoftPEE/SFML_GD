@@ -13,7 +13,7 @@ struct AircraftMover
 
   void operator() (Aircraft& aircraft, sf::Time dt) const
   {
-    aircraft.accelerator(velocity * dt.asSeconds());
+    aircraft.accelerator(velocity);
   }
 
   sf::Vector2f velocity;
@@ -108,7 +108,7 @@ bool Player::isRealTimeAction(Action action)
 
 void Player::initializeActions( )
 {
-  const float playerSpeed = 200.f;
+  const float playerSpeed = 200.0f;
   mActionBindings[MoveUp].action    = derivedAction<Aircraft>(AircraftMover(0.f,-playerSpeed));
   mActionBindings[MoveDown].action  = derivedAction<Aircraft>(AircraftMover(0.f,+playerSpeed));
   mActionBindings[MoveLeft].action  = derivedAction<Aircraft>(AircraftMover(-playerSpeed,0.f));
