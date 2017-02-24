@@ -1,11 +1,11 @@
 #pragma once
 
-#include <vector>
-
 #include <State.hpp>
 
 #include <SFML\Graphics\Sprite.hpp>
 #include <SFML\Graphics\Text.hpp>
+
+#include <vector>
 
 class MenuState : public State
 {

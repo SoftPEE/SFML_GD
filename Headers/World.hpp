@@ -1,18 +1,18 @@
 #pragma once
 
-#include <array>
-
-#include <SFML\Graphics\Texture.hpp>
-#include <SFML\Graphics\RenderWindow.hpp>
-#include <SFML\System\Time.hpp>
-#include <SFML\Graphics\View.hpp>
-
 #include <ResourceIdentifier.hpp>
 #include <ResourceHolder.hpp>
 #include <SceneNode.hpp>
 #include <SpriteNode.hpp>
 #include <Aircraft.hpp>
 #include <CommandQueue.hpp>
+
+#include <SFML\Graphics\Texture.hpp>
+#include <SFML\Graphics\RenderWindow.hpp>
+#include <SFML\System\Time.hpp>
+#include <SFML\Graphics\View.hpp>
+
+#include <array>
 
 class World
 {

@@ -1,8 +1,8 @@
 #pragma once
 
-#include <SFML\Graphics\Sprite.hpp>
-
 #include <SceneNode.hpp>
+
+#include <SFML\Graphics\Sprite.hpp>
 
 class SpriteNode : public SceneNode
 {

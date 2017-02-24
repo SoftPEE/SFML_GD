@@ -1,8 +1,8 @@
 #pragma once
 
-#include <SFML\System\Vector2.hpp>
-
 #include <SceneNode.hpp>
+
+#include <SFML\System\Vector2.hpp>
 
 class Entity : public SceneNode
 {

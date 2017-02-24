@@ -1,13 +1,13 @@
 #pragma once
 
-#include <memory>
-
 #include <StateIdentifiers.hpp>
 #include <ResourceIdentifier.hpp>
 #include <ResourceHolder.hpp>
 
 #include <SFML\System\Time.hpp>
 #include <SFML\Window\Event.hpp>
+
+#include <memory>
 
 namespace sf
 {

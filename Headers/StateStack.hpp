@@ -1,14 +1,14 @@
 #pragma once
 
-#include <vector>
-#include <map>
-#include <functional>
-
 #include <StateIdentifiers.hpp>
 #include <State.hpp>
 
 #include <SFML\System\NonCopyable.hpp>
 #include <SFML\System\Time.hpp>
+
+#include <vector>
+#include <map>
+#include <functional>
 
 namespace sf
 {

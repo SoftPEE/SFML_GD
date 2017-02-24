@@ -2,13 +2,13 @@
 
 #include <Command.hpp>
 
-#include <memory>
-#include <vector>
-
 #include <SFML\Graphics\Drawable.hpp>
 #include <SFML\Graphics\Transformable.hpp>
 #include <SFML\System\NonCopyable.hpp>
 #include <SFML\System\Time.hpp>
+
+#include <memory>
+#include <vector>
 
 class SceneNode : public sf::Drawable, public sf::Transformable, private sf::NonCopyable
 {

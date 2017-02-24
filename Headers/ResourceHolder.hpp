@@ -1,11 +1,11 @@
 #pragma once
 
+#include <ResourceIdentifier.hpp>
+
 #include <memory>
 #include <map>
 #include <cassert>
 #include <string>
-
-#include <ResourceIdentifier.hpp>
 
 template <typename Resource, typename Identifier>
 class ResourceHolder

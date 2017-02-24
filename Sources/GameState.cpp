@@ -4,8 +4,6 @@
 
 #include <SFML\Window\Event.hpp>
 
-#include <iostream>
-
 GameState::GameState(StateStack& stack, Context context )
   : State{stack, context }
   , mWorld{*context.window }

@@ -11,12 +11,12 @@ Beschreibung:	SFML Game Development
 
 ****************************************************************************************************************************/
 
+#include <Application.hpp>
+#include <Configuration.hpp>
+
 #include <iostream>
 #include <fstream>
 #include <Windows.h>
-
-#include <Application.hpp>
-#include <Configuration.hpp>
 
 int main()
 {

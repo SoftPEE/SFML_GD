@@ -5,8 +5,6 @@
 #include<SFML\Graphics\RenderTarget.hpp>
 #include<SFML\Graphics\RenderStates.hpp>
 
-
-
 Textures::ID toTextureID(Aircraft::Type type)
 {
   switch (type)
@@ -19,6 +17,7 @@ Textures::ID toTextureID(Aircraft::Type type)
     break;
   }
 }
+
 
 Aircraft::Aircraft(Aircraft::Type type, const TextureHolder& texture)
   : mType {type }

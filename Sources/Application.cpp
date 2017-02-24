@@ -1,6 +1,8 @@
 #include <Application.hpp>
-#include <State.hpp>
 
+//Benötigte State Header
+//States müssen in der Methode registerStates registriert werden
+#include <State.hpp>
 #include <TitleState.hpp>
 #include <GameState.hpp>
 #include <MenuState.hpp>
