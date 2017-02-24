@@ -163,6 +163,7 @@
     <ClCompile Include="Sources\Configuration.cpp" />
     <ClCompile Include="Sources\Entity.cpp" />
     <ClCompile Include="Sources\GameState.cpp" />
+    <ClCompile Include="Sources\MenuState.cpp" />
     <ClCompile Include="Sources\Player.cpp" />
     <ClCompile Include="Sources\SceneNode.cpp" />
     <ClCompile Include="Sources\SpriteNode.cpp" />
@@ -181,6 +182,7 @@
     <ClInclude Include="Headers\Configuration.hpp" />
     <ClInclude Include="Headers\Entity.hpp" />
     <ClInclude Include="Headers\GameState.hpp" />
+    <ClInclude Include="Headers\MenuState.hpp" />
     <ClInclude Include="Headers\Player.hpp" />
     <ClInclude Include="Headers\ResourceHolder.hpp" />
     <ClInclude Include="Headers\ResourceIdentifier.hpp" />

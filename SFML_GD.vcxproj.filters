@@ -125,6 +125,9 @@
     <ClCompile Include="Sources\Utilities.cpp">
       <Filter>Code-Files\Resource\SRC</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\MenuState.cpp">
+      <Filter>Code-Files\State\SRC</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Aircraft.hpp">
@@ -183,6 +186,9 @@
     </ClInclude>
     <ClInclude Include="Headers\Utilities.hpp">
       <Filter>Code-Files\Resource\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\MenuState.hpp">
+      <Filter>Code-Files\State\HPP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
