@@ -1,6 +1,7 @@
 #pragma once
 
 #include <State.hpp>
+#include <Container.hpp>
 
 #include <SFML\Graphics\Sprite.hpp>
 #include <SFML\Graphics\Text.hpp>
@@ -29,5 +30,6 @@ private:
   sf::Sprite             mBackgroundSprite;
   std::vector<sf::Text>  mOptions;
   std::size_t            mOptionIndex;
+  GUI::Container         mGUIContainer;
 
 };

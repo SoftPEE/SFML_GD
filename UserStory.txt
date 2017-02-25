@@ -59,3 +59,18 @@ Anforderungen Iteration_01
 
 	Application
 		- Hauptklasse in der die gesamte Datenstruktur liegt
+
+	MenuState erstellen
+	Pausesate erstellen
+
+	GUI
+		- Basis-Klasse Component
+			->	Drawable, Transformable, NonCopyable
+			->	Grundfunktionalität einer GUI-Klasse
+		- Container
+			->	Containerklasse um mehrere GUI-Elemente zu einer zusammenhängenden Struktur behandeln zu können
+		- Button
+			->	Button als Schalter
+			->	Button als Taster
+		- Label
+			->	Text

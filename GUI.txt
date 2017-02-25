@@ -1,0 +1,21 @@
+GUI
+===
+
+Alle GUI-Elemente sind von der abstrakten Klasse Component abgeleitet.
+
+Container
+---------
+In einem Context zusammengehörende GUI-Elemente lassen sich in einem Container zusammenfassen.
+	->	Dadurch sind die verschiedenen Elemente in einer Abhängigkeit verbunden (auswahl, etz.)
+
+Button
+------
+Button - Elemente können zwei verschiedene Funktionsweisen beinhalten:
+	-> Schaltend:	Der Button wird bei Betätigung gerastet und muss durch eine andere aktion wieder frei gegeben werden.
+	-> Tastend:		Der Button führt seine Aktion durch und ist sofort wieder benutzbar.
+
+	-> Buttons beherbergen einen anzeige Text
+
+Label
+-----
+Label - Elemente zeigen nur einen Text an, keine weiteren Funktionalitäten vorhanden.

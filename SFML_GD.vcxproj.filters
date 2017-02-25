@@ -68,6 +68,15 @@
     <Filter Include="Code-Files\State\SRC">
       <UniqueIdentifier>{460f4409-cae8-4e08-b818-7308d256143d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Code-Files\GUI">
+      <UniqueIdentifier>{ef7de5cb-b24d-4139-b39c-c8a0003144c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\GUI\HPP">
+      <UniqueIdentifier>{831e8bf0-a919-4c18-95d6-351c7906e513}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\GUI\SRC">
+      <UniqueIdentifier>{6b6b6780-9c99-488a-b344-182bb71b59e6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="UserStory.txt" />
@@ -75,6 +84,7 @@
     <Text Include="Message System.txt" />
     <Text Include="Objektdatenstruktur.txt" />
     <Text Include="State Struktur.txt" />
+    <Text Include="GUI.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sources\Aircraft.cpp">
@@ -130,6 +140,18 @@
     </ClCompile>
     <ClCompile Include="Sources\PauseState.cpp">
       <Filter>Code-Files\State\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Component.cpp">
+      <Filter>Code-Files\GUI\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Button.cpp">
+      <Filter>Code-Files\GUI\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Label.cpp">
+      <Filter>Code-Files\GUI\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Container.cpp">
+      <Filter>Code-Files\GUI\SRC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +218,18 @@
     <ClInclude Include="Headers\PauseState.hpp">
       <Filter>Code-Files\State\HPP</Filter>
     </ClInclude>
+    <ClInclude Include="Headers\Component.hpp">
+      <Filter>Code-Files\GUI\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Container.hpp">
+      <Filter>Code-Files\GUI\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Button.hpp">
+      <Filter>Code-Files\GUI\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Label.hpp">
+      <Filter>Code-Files\GUI\HPP</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="Headers\ResourceHolder.inl">
@@ -222,6 +256,15 @@
       <Filter>Ressourcendateien\Media\Textures</Filter>
     </Image>
     <Image Include="Media\Textures\TitleScreen.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\ButtonNormal.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\ButtonPressed.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\ButtonSelected.png">
       <Filter>Ressourcendateien\Media\Textures</Filter>
     </Image>
   </ItemGroup>

@@ -14,7 +14,7 @@ TitleState::TitleState(StateStack& stack, Context context)
   mText.setFont(context.fonts->get(Fonts::default));
   mText.setCharacterSize(20);
   mText.setString("Weiter mit beliebiger Taste");
-  setOrigin(mText);
+  centerOrigin(mText);
   mText.setPosition(context.window->getView().getSize() / 2.f);
 }
 

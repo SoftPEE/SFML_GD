@@ -1,6 +1,16 @@
 Objektdatenstruktur
 ===================
 
+Lokalisierung aller Referenztypen
+---------------------------------
+sf::RenderWindow			Application
+Player						Application
+TextureHolder				Application
+FontHolder					Application
+StateStack					Application
+CommandQueue				World
+World						GameState
+
 ausgehend vom World - Objekt  (world.hpp / .cpp)
 	SceneRoot	-> SceneNode[Layer_Background]	-> Background-Sprite
 				-> SceneNode[Layer_Air]			-> Player-Objekt

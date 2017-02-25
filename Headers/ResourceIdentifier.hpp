@@ -15,7 +15,10 @@ namespace Textures
     Eagle,
     Raptor,
     Dessert,
-    TitleScreen
+    TitleScreen,
+    ButtonNormal,
+    ButtonPressed,
+    ButtonSelected
   };
 
 }

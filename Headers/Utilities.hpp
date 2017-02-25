@@ -6,5 +6,5 @@ namespace sf
   class Sprite;
 }
 
-void setOrigin(sf::Text& text);
-void setOrigin(sf::Sprite& sprite);
+void centerOrigin(sf::Text& text);
+void centerOrigin(sf::Sprite& sprite);

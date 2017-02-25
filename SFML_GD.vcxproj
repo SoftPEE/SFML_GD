@@ -148,6 +148,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <Text Include="GUI.txt" />
     <Text Include="Klassen.txt" />
     <Text Include="Message System.txt" />
     <Text Include="Objektdatenstruktur.txt" />
@@ -158,11 +159,15 @@
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Sources\Aircraft.cpp" />
     <ClCompile Include="Sources\Application.cpp" />
+    <ClCompile Include="Sources\Button.cpp" />
     <ClCompile Include="Sources\Command.cpp" />
     <ClCompile Include="Sources\CommandQueue.cpp" />
+    <ClCompile Include="Sources\Component.cpp" />
     <ClCompile Include="Sources\Configuration.cpp" />
+    <ClCompile Include="Sources\Container.cpp" />
     <ClCompile Include="Sources\Entity.cpp" />
     <ClCompile Include="Sources\GameState.cpp" />
+    <ClCompile Include="Sources\Label.cpp" />
     <ClCompile Include="Sources\MenuState.cpp" />
     <ClCompile Include="Sources\PauseState.cpp" />
     <ClCompile Include="Sources\Player.cpp" />
@@ -177,12 +182,16 @@
   <ItemGroup>
     <ClInclude Include="Headers\Aircraft.hpp" />
     <ClInclude Include="Headers\Application.hpp" />
+    <ClInclude Include="Headers\Button.hpp" />
     <ClInclude Include="Headers\Category.hpp" />
     <ClInclude Include="Headers\Command.hpp" />
     <ClInclude Include="Headers\CommandQueue.hpp" />
+    <ClInclude Include="Headers\Component.hpp" />
     <ClInclude Include="Headers\Configuration.hpp" />
+    <ClInclude Include="Headers\Container.hpp" />
     <ClInclude Include="Headers\Entity.hpp" />
     <ClInclude Include="Headers\GameState.hpp" />
+    <ClInclude Include="Headers\Label.hpp" />
     <ClInclude Include="Headers\MenuState.hpp" />
     <ClInclude Include="Headers\PauseState.hpp" />
     <ClInclude Include="Headers\Player.hpp" />
@@ -204,6 +213,9 @@
     <None Include="Headers\ResourceHolder.inl" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="Media\Textures\ButtonNormal.png" />
+    <Image Include="Media\Textures\ButtonPressed.png" />
+    <Image Include="Media\Textures\ButtonSelected.png" />
     <Image Include="Media\Textures\Desert.png" />
     <Image Include="Media\Textures\Eagle.png" />
     <Image Include="Media\Textures\Raptor.png" />

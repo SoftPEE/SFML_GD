@@ -1,12 +1,3 @@
-States
-======
-
-StateStack 
-Alle benutzen States müssen im StateStack registriert werden.
-Zum Start wird der State Title geladen.
-Es muss immer ein State pro Frame aktiv sein, sonst wird das Programm geschlossen.
-
-
 Struktur
 ========
 
@@ -15,5 +6,35 @@ State	>>  GameState
 		>>	MenuState
 		>>	PauseState
 
-Update und Events werden im Stack rückwärts durchlaufen
-Draw wird vorwärts durchlaufen
+Die States werden in einem Stack verwaltet. Sollte der Stack in einer Frameiteration leer sein, wird das Programm geschlossen, da keine Ausgabe mehr erfolgen kann.
+In einem StateStack abgelegtem State muss vom Datentyp State abgeleitet sein.
+
+Der StateStack beinhaltet eine Referenz vom Datentyp Context, die alle wichtigen Resourcen Stateübergreifend beinhaltet.
+
+Wichtig!!! Context enthält nur Pointer auf die entsprechenden Objektreferenzen. Dadurch wird niemals eine Referenz auf ein Contextobjekt erstellt.
+
+Dieser Context wird als Pointerreferenz an alle States beim jeweiligen State-Konstruktoraufruf mit gegeben.
+Über die Methode getContext() kann auf den Context zugegriffen werden.
+
+Um den State zu wechseln muss im State die Methode requestStatePush(StateID) aufgerufen werden.
+	-> Die Methode setzt eine Aufrufanfrage vom Typ StateStack::Action in eine PendingList mit der Action >>Push<<
+		(Vorgang ist identisch mit den nachfolgenden Actionen)
+	-> Dadurch wird die createState-Methode aufgerufen um einen registrierten State zu erstellen
+
+Um dabei eine Überlappung von zwei States zu vermeiden muss vorher die Methode requestStatePop() aufgerufen werden
+	-> Dadurch wird der zu letzt eingefügte State wieder entfernt
+
+Um alle States aus dem Stack zu entfernen requestStateClear() ausführen
+	-> Dadurch werden alle aktiven States aus dem Stack entfernt
+
+Bei jedem Frame werden die 3 GrundMethode
+	->	Update
+	->	handleEvent
+	->	draw
+durchlaufen. 
+Dabei werden folgende Durchlaufsrichtungen genommen
+	->	Update werden im Stack rückwärts durchlaufen.
+	->	Events werden im Stack rückwärts durchlaufen.
+	->	Draw wird vorwärts durchlaufen
+
+Durch dieses Prinziep wird erreicht, das alle States immer dargestellt werden (überlappende States), jedoch die Interaction zum ersten State unterbrochen werden kann.

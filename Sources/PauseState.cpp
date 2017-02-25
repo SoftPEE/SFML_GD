@@ -17,12 +17,12 @@ PauseState::PauseState(StateStack& stack, Context context)
 
   mPauseText.setString("Spiel pausiert");
   mPauseText.setCharacterSize(50);
-  setOrigin(mPauseText);
+  centerOrigin(mPauseText);
   mPauseText.setPosition(0.5 * viewSize.x, 0.4* viewSize.y);
 
   mInstructionText.setString("Backspace um forzufahren, Esc zum Beenden");
   mInstructionText.setCharacterSize(20);
-  setOrigin(mInstructionText);
+  centerOrigin(mInstructionText);
   mInstructionText.setPosition(0.5 * viewSize.x, 0.6 * viewSize.y);
 
 }

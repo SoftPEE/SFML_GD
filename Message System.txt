@@ -12,7 +12,7 @@ World beinhaltet die Commandqueue!
 Verlauf der Commandqueue
 ========================
 Commandqueue mit Spielerbefehlen füllen:
-	World >>Referenze<< -> Game >>Referenz<< -> Player --> Playerinput |
+	World -> GameState -> Player --> Playerinput 
 
 Commandqueue ausführen
 	World (update) >> SceneGraph (SceneNode) >> onCommand von jedem Node in der Struktur >> Command.action (ausführende Funktion)
