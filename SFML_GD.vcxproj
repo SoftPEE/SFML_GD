@@ -172,6 +172,7 @@
     <ClCompile Include="Sources\PauseState.cpp" />
     <ClCompile Include="Sources\Player.cpp" />
     <ClCompile Include="Sources\SceneNode.cpp" />
+    <ClCompile Include="Sources\SettingState.cpp" />
     <ClCompile Include="Sources\SpriteNode.cpp" />
     <ClCompile Include="Sources\State.cpp" />
     <ClCompile Include="Sources\StateStack.cpp" />
@@ -198,6 +199,7 @@
     <ClInclude Include="Headers\ResourceHolder.hpp" />
     <ClInclude Include="Headers\ResourceIdentifier.hpp" />
     <ClInclude Include="Headers\SceneNode.hpp" />
+    <ClInclude Include="Headers\SettingState.hpp" />
     <ClInclude Include="Headers\SpriteNode.hpp" />
     <ClInclude Include="Headers\State.hpp" />
     <ClInclude Include="Headers\StateIdentifiers.hpp" />

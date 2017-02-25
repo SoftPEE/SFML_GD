@@ -8,7 +8,6 @@ namespace States
     Title,
     Menu,
     Game,
-    Pause,
-    Setting
+    Pause
   };
 }

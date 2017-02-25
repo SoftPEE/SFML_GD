@@ -17,6 +17,8 @@ public:
   virtual bool  handleEvent(const sf::Event& event);
   virtual void  draw();
 
+  void          updateOptionText();
+
 private:
   enum OptionNames
   {
@@ -26,6 +28,8 @@ private:
 
 private:
   sf::Sprite             mBackgroundSprite;
+  std::vector<sf::Text>  mOptions;
+  std::size_t            mOptionIndex;
   GUI::Container         mGUIContainer;
 
 };

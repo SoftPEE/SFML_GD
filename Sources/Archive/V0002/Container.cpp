@@ -81,7 +81,7 @@ namespace GUI
     do
     {
       next = (next + 1) % mChildren.size();
-    } while (!mChildren[next]->isSelectable());
+    } while (!mChildren[mSelectedChild]->isSelectable());
     select(next);
   }
 

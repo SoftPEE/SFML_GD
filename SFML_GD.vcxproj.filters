@@ -153,6 +153,9 @@
     <ClCompile Include="Sources\Container.cpp">
       <Filter>Code-Files\GUI\SRC</Filter>
     </ClCompile>
+    <ClCompile Include="Sources\SettingState.cpp">
+      <Filter>Code-Files\State\SRC</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Headers\Aircraft.hpp">
@@ -229,6 +232,9 @@
     </ClInclude>
     <ClInclude Include="Headers\Label.hpp">
       <Filter>Code-Files\GUI\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\SettingState.hpp">
+      <Filter>Code-Files\State\HPP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

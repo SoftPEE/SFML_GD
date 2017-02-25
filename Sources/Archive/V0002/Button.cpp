@@ -3,6 +3,7 @@
 
 #include <SFML\Graphics\RenderTarget.hpp>
 #include <SFML\Graphics\RenderStates.hpp>
+#include <SFML\Window\Event.hpp>
 
 namespace GUI
 {
@@ -72,7 +73,7 @@ namespace GUI
     if (mToggle)
       mSprite.setTexture(mPressedTexture);
     if (mCallback)
-      mCallback;
+      mCallback();
     if (!mToggle)
       deactivate();
   }
