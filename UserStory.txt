@@ -1,8 +1,8 @@
 SFML_GD
 Author:				Patrick Gehrt
 Datum:				08.02.2017
-Letzte Bearbeitung	23.02.2017
-Version:			0.0.0.2
+Letzte Bearbeitung	26.02.2017
+Version:			0.0.0.3
 SFML-Version:		2.4.1
 
 Beschreibung:	SFML Game Development
@@ -74,3 +74,15 @@ Anforderungen Iteration_01
 			->	Button als Taster
 		- Label
 			->	Text
+
+	MenuState mit GUI ausstatten
+		- Play
+		- Setting
+		- Exit
+
+	Settingstate erstellen
+		- Ermöglicht dem Benutzer die Tastenbelegung zu ändern
+
+	Spielmechaniken implementieren
+		- Objekte bekommen Lebenspunkte, die nun durch den Entity-Konstruktor explizit angegeben werden müssen.
+		- Funktionalität zur Reduzierung und Auffülung der Lebenspunkte.

@@ -2,8 +2,9 @@
 
 #include <SFML\Graphics\RenderWindow.hpp>
 
-World::World(sf::RenderWindow& window)
+World::World(sf::RenderWindow& window, FontHolder& font)
   : mWindow{ window }
+  , mFontHolder{ font }
   , mWorldView{ window.getDefaultView( ) }
   , mTextures{ }
   , mSceneGraph{ }
@@ -78,7 +79,7 @@ void World::buildScene( )
   mSceneLayer[Background]->attachChild(std::move(backgroundSprite));
 
   //Spieler erstellen
-  std::unique_ptr<Aircraft> playerAircraft{ new Aircraft{Aircraft::Eagle, mTextures} };
+  std::unique_ptr<Aircraft> playerAircraft{ new Aircraft{Aircraft::Eagle, mTextures, mFontHolder} };
   mPlayer = playerAircraft.get();
   mPlayer->setPosition(mSpawnposition);
   mPlayer->setVelocity(40.0f, mScrollSpeed);

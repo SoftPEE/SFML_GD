@@ -165,6 +165,7 @@
     <ClCompile Include="Sources\Component.cpp" />
     <ClCompile Include="Sources\Configuration.cpp" />
     <ClCompile Include="Sources\Container.cpp" />
+    <ClCompile Include="Sources\DataTables.cpp" />
     <ClCompile Include="Sources\Entity.cpp" />
     <ClCompile Include="Sources\GameState.cpp" />
     <ClCompile Include="Sources\Label.cpp" />
@@ -176,6 +177,7 @@
     <ClCompile Include="Sources\SpriteNode.cpp" />
     <ClCompile Include="Sources\State.cpp" />
     <ClCompile Include="Sources\StateStack.cpp" />
+    <ClCompile Include="Sources\TextNode.cpp" />
     <ClCompile Include="Sources\TitleState.cpp" />
     <ClCompile Include="Sources\Utilities.cpp" />
     <ClCompile Include="Sources\World.cpp" />
@@ -190,6 +192,7 @@
     <ClInclude Include="Headers\Component.hpp" />
     <ClInclude Include="Headers\Configuration.hpp" />
     <ClInclude Include="Headers\Container.hpp" />
+    <ClInclude Include="Headers\DataTables.hpp" />
     <ClInclude Include="Headers\Entity.hpp" />
     <ClInclude Include="Headers\GameState.hpp" />
     <ClInclude Include="Headers\Label.hpp" />
@@ -204,6 +207,7 @@
     <ClInclude Include="Headers\State.hpp" />
     <ClInclude Include="Headers\StateIdentifiers.hpp" />
     <ClInclude Include="Headers\StateStack.hpp" />
+    <ClInclude Include="Headers\TextNode.hpp" />
     <ClInclude Include="Headers\TitleState.hpp" />
     <ClInclude Include="Headers\Utilities.hpp" />
     <ClInclude Include="Headers\World.hpp" />

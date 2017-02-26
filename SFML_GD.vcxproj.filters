@@ -77,6 +77,15 @@
     <Filter Include="Code-Files\GUI\SRC">
       <UniqueIdentifier>{6b6b6780-9c99-488a-b344-182bb71b59e6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Code-Files\Objekte\Data">
+      <UniqueIdentifier>{d4248660-2f6b-4a15-ac6f-be705c6315ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Objekte\Data\HPP">
+      <UniqueIdentifier>{61887526-8d99-452a-b098-03d39bd45330}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Code-Files\Objekte\Data\SRC">
+      <UniqueIdentifier>{e80bf3e5-1d64-46bf-9477-e39a1739d1f2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="UserStory.txt" />
@@ -155,6 +164,12 @@
     </ClCompile>
     <ClCompile Include="Sources\SettingState.cpp">
       <Filter>Code-Files\State\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DataTables.cpp">
+      <Filter>Code-Files\Objekte\Data\SRC</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\TextNode.cpp">
+      <Filter>Code-Files\Objekte\SRC</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +250,12 @@
     </ClInclude>
     <ClInclude Include="Headers\SettingState.hpp">
       <Filter>Code-Files\State\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\DataTables.hpp">
+      <Filter>Code-Files\Objekte\Data\HPP</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\TextNode.hpp">
+      <Filter>Code-Files\Objekte\HPP</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

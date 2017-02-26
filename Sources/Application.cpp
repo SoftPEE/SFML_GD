@@ -10,7 +10,7 @@
 #include <SettingState.hpp>
 
 //STATIC
-const sf::Time Application::TIME_PER_FRAME = sf::Time(sf::seconds(1.0/60.0));
+const sf::Time Application::TIME_PER_FRAME = sf::Time(sf::seconds(1.0f/60.0f));
 
 Application::Application( )
   : mWindow{ sf::VideoMode(640, 480), "SFML_Application" }
@@ -30,7 +30,7 @@ Application::Application( )
 
   mStatisticText.setFont(mFonts.get(Fonts::default));
   mStatisticText.setPosition(5.f,5.f);
-  mStatisticText.setCharacterSize(10.f);
+  mStatisticText.setCharacterSize(10);
 
   registerStates();
   mStateStack.pushState(States::Title);

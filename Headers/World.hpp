@@ -17,7 +17,7 @@
 class World
 {
 public:
-  explicit World::World(sf::RenderWindow& window);
+  explicit World::World(sf::RenderWindow& window, FontHolder& font);
   void            update(sf::Time dt);
   void            draw();
   CommandQueue&   getCommandQueue();
@@ -41,6 +41,7 @@ private:
   sf::RenderWindow&                   mWindow;
   sf::View                            mWorldView;
   TextureHolder                       mTextures;
+  FontHolder&                         mFontHolder;
   SceneNode                           mSceneGraph;
   std::array<SceneNode*, LayerCount>  mSceneLayer;
   CommandQueue                        mCommandQueue;
