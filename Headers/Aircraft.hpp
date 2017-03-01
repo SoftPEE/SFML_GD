@@ -13,6 +13,7 @@ public:
   {
     Eagle,
     Raptor,
+    Avenger,
     TypeCounts
   };
 public:
@@ -25,8 +26,14 @@ private:
   sf::Sprite  mSprite;
   TextNode*   mHealthDisplay;
 
+  float       mTraveledDistance;
+  int         mDirectionIndex;
+
 private:
   virtual void drawCurrent(sf::RenderTarget& states, sf::RenderStates target) const;
   virtual void updateCurrent(sf::Time dt);
+
+          void updateMovementPattern(sf::Time dt);
+          float getMaxSpeed() const;
 
 };

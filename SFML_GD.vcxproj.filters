@@ -294,6 +294,27 @@
     <Image Include="Media\Textures\ButtonSelected.png">
       <Filter>Ressourcendateien\Media\Textures</Filter>
     </Image>
+    <Image Include="Media\Textures\Avenger.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\Bullet.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\FireRate.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\FireSpread.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\HealthRefill.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\Missile.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
+    <Image Include="Media\Textures\MissileRefill.png">
+      <Filter>Ressourcendateien\Media\Textures</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Media\Sansation.ttf">

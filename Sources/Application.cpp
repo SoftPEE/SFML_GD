@@ -13,7 +13,7 @@
 const sf::Time Application::TIME_PER_FRAME = sf::Time(sf::seconds(1.0f/60.0f));
 
 Application::Application( )
-  : mWindow{ sf::VideoMode(640, 480), "SFML_Application" }
+  : mWindow{ sf::VideoMode(1024, 768), "SFML_Application" }
   , mTextures{ }
   , mFonts{ }
   , mPlayer{ }
